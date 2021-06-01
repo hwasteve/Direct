@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  mbdirect.vault.api:
+    image: ${DOCKER_REGISTRY-}mbdirectvaultapi
+    build:
+      context: .
+      dockerfile: mbDirect.Vault.API/Dockerfile

@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mbDirect.Vault.API", "mbDirect.Vault.API\mbDirect.Vault.API.csproj", "{68FAF17F-B89F-4D7F-987F-F7048D20B17B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EAD8750D-CC22-439A-AA56-1DF61E625417} = {EAD8750D-CC22-439A-AA56-1DF61E625417}
+		{F73BF745-2E1E-4506-8A3D-B7552235C0C7} = {F73BF745-2E1E-4506-8A3D-B7552235C0C7}
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C20C56BB-6431-4D6E-A8E1-365C2A8FF4E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mbDirect.Vault.Models", "mbDirect.Vault.Models\mbDirect.Vault.Models.csproj", "{F73BF745-2E1E-4506-8A3D-B7552235C0C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mbDirect.Vault.Repo", "mbDirect.Vault.Repo\mbDirect.Vault.Repo.csproj", "{EAD8750D-CC22-439A-AA56-1DF61E625417}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68FAF17F-B89F-4D7F-987F-F7048D20B17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FAF17F-B89F-4D7F-987F-F7048D20B17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FAF17F-B89F-4D7F-987F-F7048D20B17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FAF17F-B89F-4D7F-987F-F7048D20B17B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20C56BB-6431-4D6E-A8E1-365C2A8FF4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20C56BB-6431-4D6E-A8E1-365C2A8FF4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20C56BB-6431-4D6E-A8E1-365C2A8FF4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20C56BB-6431-4D6E-A8E1-365C2A8FF4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73BF745-2E1E-4506-8A3D-B7552235C0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73BF745-2E1E-4506-8A3D-B7552235C0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73BF745-2E1E-4506-8A3D-B7552235C0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73BF745-2E1E-4506-8A3D-B7552235C0C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD8750D-CC22-439A-AA56-1DF61E625417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD8750D-CC22-439A-AA56-1DF61E625417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD8750D-CC22-439A-AA56-1DF61E625417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD8750D-CC22-439A-AA56-1DF61E625417}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66C35C4B-C022-47B4-A1BA-D4CEE3FE5550}
+	EndGlobalSection
+EndGlobal
