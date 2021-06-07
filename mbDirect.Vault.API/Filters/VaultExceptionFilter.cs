@@ -37,6 +37,16 @@ namespace mbDirect.Vault.API.Filters
                 context.HttpContext.Response.ContentType = responseContent.Headers.ContentType.MediaType;
                 context.HttpContext.Response.Body.WriteAsync(b, 0, b.Length);
             }
+            else if (context.Exception.GetType() == typeof(RequestException))
+            {
+                var ex = context.Exception as RequestException;
+                var responseContent = ex.ToStringContent(context.HttpContext.Request.ContentType);
+                var b = Encoding.UTF8.GetBytes(responseContent.ReadAsStringAsync().Result.ToString());
+                context.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = ex.Code;
+                context.HttpContext.Response.StatusCode = (int)ex.HttpStatus;
+                context.HttpContext.Response.ContentType = responseContent.Headers.ContentType.MediaType;
+                context.HttpContext.Response.Body.WriteAsync(b, 0, b.Length);
+            }
             else
             {
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
