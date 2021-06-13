@@ -51,7 +51,7 @@ namespace mbDirect.Vault.API
             var connectionStringBuilder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("VaultDBConnectionString"));
             connectionStringBuilder.UserID = Configuration["dbuser"];
             connectionStringBuilder.Password = Configuration["dbpassword"];
-            services.AddDbContext<VaultContext>(o => o.UseSqlServer(connectionStringBuilder.ConnectionString));
+            services.AddDbContext<VaultContext>(o => o.UseSqlServer(connectionStringBuilder.ConnectionString, s=>s.MigrationsAssembly("mbDirect.Vault.API")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
